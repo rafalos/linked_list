@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Node
-  attr_accessor :next_node, :val
+  attr_reader :val
+  attr_accessor :next_node
 
   def initialize(val)
     @val = val
