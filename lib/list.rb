@@ -108,11 +108,11 @@ class LinkedList
 
   private
 
-  def iterator(node = @head, times = 0, &block)
-    times += 1
+  def iterator(node = @head, times_passed = 0, &block)
+    times_passed += 1
     return unless node
 
-    yield(node, times)
-    iterator(node.next_node, times, &block)
+    yield(node, times_passed)
+    iterator(node.next_node, times_passed, &block)
   end
 end
